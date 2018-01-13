@@ -16,9 +16,9 @@ def detail(request, question_id):
     return render(request, 'polls/detail.html', {'question' : question})
 
 def results(request, question_id):
-    response = f"You're looking at the results of question {question_id}"
+    response = "You're looking at the results of question {}".format(question_id)
     return HttpResponse(response)
 
 def vote(request, question_id):
-    response = f"You're voting at the results of question {question_id}"
+    response = "You're voting at the results of question {}".format(question_id)
     return HttpResponse(response)
